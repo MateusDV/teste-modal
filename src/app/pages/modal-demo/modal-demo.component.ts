@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { ModalComponent } from "../../components/modal/modal.component";
-import { ModalDemo } from '../../shared/models/modal-demo';
-import { IModalWithModel } from '../../shared/ModalWithModel';
+import { ModalDemoProps } from '../../shared/models/modal-demo';
+import { IModalWithModel as IModalWithProps } from '../../shared/ModalWithModel';
 
 @Component({
   selector: 'app-modal-demo',
@@ -9,6 +9,6 @@ import { IModalWithModel } from '../../shared/ModalWithModel';
   templateUrl: './modal-demo.component.html',
   styleUrl: './modal-demo.component.css'
 })
-export class ModalDemoComponent implements IModalWithModel<ModalDemo> {
-  model: ModalDemo = new ModalDemo();
+export class ModalDemoComponent implements IModalWithProps<ModalDemoProps> {
+  model: ModalDemoProps = new ModalDemoProps();
 }

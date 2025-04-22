@@ -1,7 +1,7 @@
-import { ModalDemo } from './modal-demo';
+import { ModalDemoProps } from './modal-demo';
 
 describe('ModalDemo', () => {
   it('should create an instance', () => {
-    expect(new ModalDemo()).toBeTruthy();
+    expect(new ModalDemoProps()).toBeTruthy();
   });
 });

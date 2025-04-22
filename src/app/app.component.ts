@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 import { ModalDemoComponent } from './pages/modal-demo/modal-demo.component';
 import { ModalPersonalizadoService } from './services/modal-service';
-import { ModalDemo } from './shared/models/modal-demo';
+import { ModalDemoProps } from './shared/models/modal-demo';
 
 @Component({
   selector: 'app-root',
@@ -17,7 +17,7 @@ export class AppComponent {
 
   openModal() {
 
-    const model: ModalDemo = {
+    const model: ModalDemoProps = {
       message: 'teste'
     };
 
@@ -25,7 +25,7 @@ export class AppComponent {
       ModalDemoComponent,
       model);
     
-    // Não permite adicionar o compomente pois "OutroComponenteComponent" não implementa "ModalWithModel"
+    // Não permite adicionar o compomente pois "OutroComponenteComponent" não implementa "ModalWithProps"
     // const modalRef2 = this.modalService.openModal(
     //   OutroComponenteComponent,
     //   { message: 'teste' });

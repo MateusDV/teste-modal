@@ -1,3 +1,3 @@
-export class ModalDemo {
+export class ModalDemoProps {
   message: string = "";
 }
