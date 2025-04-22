@@ -1,10 +1,7 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { NgbActiveModal, NgbModal, NgbModalModule, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
-import { ModalComponent } from './components/modal/modal.component';
+import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 import { ModalDemoComponent } from './pages/modal-demo/modal-demo.component';
 import { ModalPersonalizadoService } from './services/modal-service';
-import { OutroComponenteComponent } from './pages/outro-componente/outro-componente.component';
 import { ModalDemo } from './shared/models/modal-demo';
 
 @Component({
