@@ -10,5 +10,5 @@ import { IModalWithModel } from '../../shared/ModalWithModel';
   styleUrl: './modal-demo.component.css'
 })
 export class ModalDemoComponent implements IModalWithModel<ModalDemo> {
-  @Input() model: ModalDemo = new ModalDemo();
+  model: ModalDemo = new ModalDemo();
 }

@@ -9,6 +9,7 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 })
 export class ModalComponent {
   @Input() title: string = '';
+  // Outras configs são possíveis
 
   constructor(
     public activeModal: NgbActiveModal,
