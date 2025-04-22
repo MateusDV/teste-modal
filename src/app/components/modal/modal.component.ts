@@ -8,6 +8,7 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
   styleUrl: './modal.component.css'
 })
 export class ModalComponent {
+  @Input() title: string = '';
 
   constructor(
     public activeModal: NgbActiveModal,
