@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { NgbActiveModal, NgbModal, NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbActiveModal, NgbModal, NgbModalModule, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { ModalComponent } from './components/modal/modal.component';
 import { ModalDemoComponent } from './pages/modal-demo/modal-demo.component';
+import { ModalPersonalizadoService } from './services/modal-service';
+import { OutroComponenteComponent } from './pages/outro-componente/outro-componente.component';
+import { ModalDemo } from './shared/models/modal-demo';
 
 @Component({
   selector: 'app-root',
@@ -13,9 +16,21 @@ import { ModalDemoComponent } from './pages/modal-demo/modal-demo.component';
 export class AppComponent {
   title = 'teste-modal';
 
-  constructor(private modalService: NgbModal) { }
+  constructor(private modalService: ModalPersonalizadoService) { }
 
   openModal() {
-    this.modalService.open(ModalDemoComponent, { centered: true });
+
+    const model: ModalDemo = {
+      message: 'teste'
+    };
+
+    const modalRef = this.modalService.openModal(
+      ModalDemoComponent,
+      model);
+    
+    // Não permite adicionar o compomente pois "OutroComponenteComponent" não implementa "ModalWithModel"
+    // const modalRef2 = this.modalService.openModal(
+    //   OutroComponenteComponent,
+    //   { message: 'teste' });
   }
 }
